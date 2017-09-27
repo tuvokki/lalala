@@ -10,7 +10,7 @@
           <q-item-tile label>{{user.email}}</q-item-tile>
         </q-item-main>
         <q-item-side right>
-          <q-item-tile icon="chat_bubble" color="green" />
+          <q-item-tile />
         </q-item-side>
       </q-item>
     </q-list>
@@ -19,20 +19,28 @@
 </template>
 
 <script>
-// import {
-//   QInput,
-//   QList,
-//   QListHeader,
-//   QItem,
-//   QItemTile,
-//   QItemMain,
-//   QItemSide,
-//   QChatMessage
-// } from 'quasar'
-import { Toast } from 'quasar'
+import {
+  // QInput,
+  //   QChatMessage
+  QList,
+  QListHeader,
+  QItem,
+  QItemTile,
+  QItemMain,
+  QItemSide,
+  Toast
+} from 'quasar'
 import api from 'src/api'
 export default {
   name: 'players',
+  components: {
+    QList,
+    QListHeader,
+    QItem,
+    QItemTile,
+    QItemMain,
+    QItemSide
+  },
   props: ['user'],
   data() {
     return {
