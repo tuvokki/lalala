@@ -27,8 +27,8 @@ import {
   QItem,
   QItemTile,
   QItemMain,
-  QItemSide,
-  Toast
+  QItemSide
+  // Toast
 } from 'quasar'
 import api from 'src/api'
 export default {
@@ -61,7 +61,13 @@ export default {
       email: 'wouter@tuvok.nl',
       password: 'secret'
     }).then(_ => {
-      Toast.create.positive('Authenticated')
+      // Toast.create({
+      //   html: 'Authenticated',
+      //   timeout: 2500,
+      //   color: '#000',
+      //   bgColor: 'white'
+      // })
+      console.log('User is logged in')
     })
     // Get all users
     users.find().then((response) => {

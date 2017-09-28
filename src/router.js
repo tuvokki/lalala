@@ -2,6 +2,7 @@ import Games from '@/Games.vue'
 import Hello from '@/Hello.vue'
 import Leaderboard from '@/Leaderboard.vue'
 import Players from '@/Players.vue'
+import Signin from '@/Signin.vue'
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
@@ -33,6 +34,7 @@ export default new VueRouter({
     { path: '/', component: Hello },
     { path: '/players', component: Players },
     { path: '/games', component: Games },
-    { path: '/leaderboard', component: Leaderboard }
+    { path: '/leaderboard', component: Leaderboard },
+    { path: '/signin', component: Signin }
   ]
 })

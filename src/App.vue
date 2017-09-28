@@ -8,7 +8,8 @@
       </a><br>
       <a href="#/leaderboard">leaderboard</a> |
       <a href="#/games">games</a> |
-      <a href="#/players">players</a>
+      <a href="#/players">players</a> |
+      <a href="#/signin">signin</a>
       <router-view></router-view>
     </main>
   </div>
@@ -18,7 +19,8 @@
 /*
  * Root component
  */
-export default {}
+export default {
+}
 </script>
 
 <style lang="stylus">

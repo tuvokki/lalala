@@ -1,80 +1,80 @@
 {
-  "host": "localhost",
-  "port": 3030,
-  "public": "../public/",
-  "paginate": {
-    "default": 10,
-    "max": 50
-  },
-  "authentication": {
-    "secret": "051d848c366977db7fdce1c8489730fcf091dd8f36028912a161f45ce57a5728e823fc980628ece41c02680a8714526457fe1a95a5f63538b688e45054a194aa0a23ee09a2ac6911abd4967ad10aab99a4459a57e281c20c49bd39f07f84b1cbdbdf5652c3cabc414b8af535032da39cb2e103b8c4079c20c6733f7abb0764548d7e6f7741d5137e07af00875acfc542895bd91f0aa04836ab08e7c1a3baac2bda65d0c8c3e96e2e74b3a47d813557d4838623d98e84ba8d6e802432e13e9dcc49794b58fb8688cb7568058cdefada768679425e4c6772c62217781c5c13efc9d664f386283eb07c4d889d5af856f843332d8d383c2ac9153bd18a13aa2371ae",
-    "strategies": [
-      "jwt",
-      "local"
-    ],
-    "path": "/authentication",
-    "service": "users",
-    "jwt": {
-      "header": {
-        "type": "access"
-      },
-      "audience": "https://yourdomain.com",
-      "subject": "anonymous",
-      "issuer": "feathers",
-      "algorithm": "HS256",
-      "expiresIn": "1d"
+    "host": "localhost",
+    "port": 3030,
+    "public": "../public/",
+    "paginate": {
+        "default": 10,
+        "max": 50
     },
-    "local": {
-      "entity": "user",
-      "usernameField": "email",
-      "passwordField": "password"
+    "authentication": {
+        "secret": "051d848c366977db7fdce1c8489730fcf091dd8f36028912a161f45ce57a5728e823fc980628ece41c02680a8714526457fe1a95a5f63538b688e45054a194aa0a23ee09a2ac6911abd4967ad10aab99a4459a57e281c20c49bd39f07f84b1cbdbdf5652c3cabc414b8af535032da39cb2e103b8c4079c20c6733f7abb0764548d7e6f7741d5137e07af00875acfc542895bd91f0aa04836ab08e7c1a3baac2bda65d0c8c3e96e2e74b3a47d813557d4838623d98e84ba8d6e802432e13e9dcc49794b58fb8688cb7568058cdefada768679425e4c6772c62217781c5c13efc9d664f386283eb07c4d889d5af856f843332d8d383c2ac9153bd18a13aa2371ae",
+        "strategies": [
+            "jwt",
+            "local"
+        ],
+        "path": "/authentication",
+        "service": "users",
+        "jwt": {
+            "header": {
+                "type": "access"
+            },
+            "audience": "https://yourdomain.com",
+            "subject": "anonymous",
+            "issuer": "feathers",
+            "algorithm": "HS256",
+            "expiresIn": "1d"
+        },
+        "local": {
+            "entity": "user",
+            "usernameField": "email",
+            "passwordField": "password"
+        },
+        "auth0": {
+            "clientID": "your auth0 client id",
+            "clientSecret": "your auth0 client secret",
+            "successRedirect": "/",
+            "domain": "mydomain.auth0.com"
+        },
+        "google": {
+            "clientID": "your google client id",
+            "clientSecret": "your google client secret",
+            "successRedirect": "/",
+            "scope": [
+                "profile openid email"
+            ]
+        },
+        "facebook": {
+            "clientID": "your facebook client id",
+            "clientSecret": "your facebook client secret",
+            "successRedirect": "/",
+            "scope": [
+                "public_profile",
+                "email"
+            ],
+            "profileFields": [
+                "id",
+                "displayName",
+                "first_name",
+                "last_name",
+                "email",
+                "gender",
+                "profileUrl",
+                "birthday",
+                "picture",
+                "permissions"
+            ]
+        },
+        "github": {
+            "clientID": "your github client id",
+            "clientSecret": "your github client secret",
+            "successRedirect": "/"
+        },
+        "cookie": {
+            "enabled": true,
+            "name": "feathers-jwt",
+            "httpOnly": false,
+            "secure": false
+        }
     },
-    "auth0": {
-      "clientID": "your auth0 client id",
-      "clientSecret": "your auth0 client secret",
-      "successRedirect": "/",
-      "domain": "mydomain.auth0.com"
-    },
-    "google": {
-      "clientID": "your google client id",
-      "clientSecret": "your google client secret",
-      "successRedirect": "/",
-      "scope": [
-        "profile openid email"
-      ]
-    },
-    "facebook": {
-      "clientID": "your facebook client id",
-      "clientSecret": "your facebook client secret",
-      "successRedirect": "/",
-      "scope": [
-        "public_profile",
-        "email"
-      ],
-      "profileFields": [
-        "id",
-        "displayName",
-        "first_name",
-        "last_name",
-        "email",
-        "gender",
-        "profileUrl",
-        "birthday",
-        "picture",
-        "permissions"
-      ]
-    },
-    "github": {
-      "clientID": "your github client id",
-      "clientSecret": "your github client secret",
-      "successRedirect": "/"
-    },
-    "cookie": {
-      "enabled": true,
-      "name": "feathers-jwt",
-      "httpOnly": false,
-      "secure": false
-    }
-  },
-  "nedb": "../data"
+    "nedb": "../data"
 }
