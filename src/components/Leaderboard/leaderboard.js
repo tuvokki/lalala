@@ -1,20 +1,5 @@
-<template>
-  <div class="component">
-    <h5>The Leaderboard</h5>
-    <p class="counter">Counter: {{counter}} times</p>
-    <p class="counts">Counts: {{counts}} counted</p>
-    <div class="actions">
-      <div class="actions-inner">
-        <button @click="increment">+</button>
-        <button @click="decrement">-</button>
-        <button @click="savecounter">v</button>
-      </div>
-    </div>
-  </div>
-</template>
-
-<script>
 import api from 'src/api'
+
 export default {
   data() {
     return {
@@ -56,21 +41,3 @@ export default {
     }
   }
 }
-</script>
-
-<style lang="stylus">
-@import '~variables'
-
-.component
-  margin-top 50px
-  a
-    color #35495E
-
-ul
-  list-style-type none
-  padding 0
-
-li
-  display inline-block
-  margin 0 10px
-</style>
