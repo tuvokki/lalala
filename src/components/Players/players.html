@@ -1,0 +1,17 @@
+<div class="players">
+    <h5>The players</h5>
+
+    <q-list highlight class="col-auto">
+        <q-list-header>People</q-list-header>
+        <q-item v-for="user in users" :key="user.id">
+            <q-item-side :avatar="user.avatar" />
+            <q-item-main>
+                <q-item-tile label>{{user.email}}</q-item-tile>
+            </q-item-main>
+            <q-item-side right>
+                <q-item-tile />
+            </q-item-side>
+        </q-item>
+    </q-list>
+
+</div>
