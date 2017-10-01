@@ -1,12 +1,20 @@
-# Quasar PWA App
+# PLeague PWA App
 
-> A Quasar PWA project
+> A Quasar PWA project running a Feathers backend
 
 ## Build Setup
 
 ``` bash
 # install dependencies
-$ npm install
+$ yarn
+
+# install api dependencies
+$ cd api/
+$ yarn
+
+# run backend
+$ yarn start
+$ cd ..
 
 # serve with hot reload at localhost:8081
 $ quasar dev
